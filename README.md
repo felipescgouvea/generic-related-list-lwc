@@ -14,3 +14,4 @@ To make it work you only need:
  5. done!
 
   
+[![Deploy](https://deploy-to-sfdx.com/dist/assets/images/DeployToSFDX.svg)](https://deploy-to-sfdx.com?template=https://github.com/felipescgouvea/generic-related-list-lwc/)
