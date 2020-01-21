@@ -1,0 +1,30 @@
+<template>
+    <article class="slds-card slds-card_boundary">
+        <div class="related_list_themed_border_top">
+            <lightning-card>
+                <h3 slot="title" class="slds-card__header-link">
+                    <lightning-icon icon-name={iconName} size="small" class="slds-m-right_small slds-media__figure"></lightning-icon>
+                    {title} ({listSize})
+                </h3>
+                
+
+                <lightning-datatable
+                    key-field="Name"
+                    data={data}
+                    columns={columnsFormatted}
+                    hide-checkbox-column=true
+                    onrowaction={handleRowAction}
+                >
+                <p slot="footer">
+                    <template if:true={loaded}>
+                        <lightning-button variant="base" label="View All" onclick={handleClick}></lightning-button>
+                    </template>
+                    <template if:false={loaded}>
+                        <lightning-spinner alternative-text="Loading"></lightning-spinner>
+                    </template>
+                </p>
+                </lightning-datatable>
+            </lightning-card>
+        </div>
+    </article>
+</template>
